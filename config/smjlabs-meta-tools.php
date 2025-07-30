@@ -1,49 +1,85 @@
 <?php
 
 return [
+
+  /*
+    |--------------------------------------------------------------------------
+    | Meta Tag Umum (SEO)
+    |--------------------------------------------------------------------------
+    */
   'meta' => [
-    'charset' => 'UTF-8',
-    'viewport' => 'width=device-width, initial-scale=1',
-    'title' => 'Judul Default Halaman',
-    'description' => 'Deskripsi default halaman web.',
-    'keywords' => 'laravel, seo, meta, tools',
-    'author' => 'Nama Penulis',
-    'copyright' => '© ' . date('Y'),
-    'robots' => 'index, follow',
-    'language' => 'id',
-    'canonical' => null,
+    'charset' => 'UTF-8', // Biasanya tidak perlu diubah
+    'viewport' => 'width=device-width, initial-scale=1', // Untuk responsif
+    'title' => env('APP_NAME'), // Contoh: 'Judul Halaman'
+    'description' => null, // Contoh: 'Deskripsi singkat halaman ini'
+    'keywords' => null, // Contoh: 'laravel, meta, seo'
+    'author' => null, // Contoh: 'Nama Penulis'
+    'copyright' => null, // Contoh: '© 2025 Nama Perusahaan'
+    'robots' => null, // Contoh: 'index, follow' atau 'noindex, nofollow'
+    'language' => null, // Contoh: 'id' atau 'en'
+    'canonical' => null, // Contoh: 'https://example.com/halaman'
   ],
+
+  /*
+    |--------------------------------------------------------------------------
+    | Open Graph (Facebook, LinkedIn, dll.)
+    |--------------------------------------------------------------------------
+    */
   'open_graph' => [
-    'og:title' => 'Judul OG Default',
-    'og:description' => 'Deskripsi OG default.',
-    'og:image' => 'https://example.com/images/default-og.jpg',
-    'og:url' => null,
-    'og:type' => 'website',
-    'og:site_name' => 'Nama Situs',
-    'og:locale' => 'id_ID',
+    'og:title' => null, // Contoh: 'Judul untuk OG'
+    'og:description' => null, // Contoh: 'Deskripsi saat dibagikan'
+    'og:image' => null, // Contoh: 'https://example.com/image.jpg'
+    'og:url' => null, // Biasanya isi dari request()->url()
+    'og:type' => null, // Contoh: 'article', 'website', dll.
+    'og:site_name' => null, // Contoh: 'Nama Situs Anda'
+    'og:locale' => null, // Contoh: 'id_ID', 'en_US'
   ],
+
+  /*
+    |--------------------------------------------------------------------------
+    | Twitter Card
+    |--------------------------------------------------------------------------
+    */
   'twitter' => [
-    'twitter:card' => 'summary_large_image',
-    'twitter:title' => 'Judul Twitter Default',
-    'twitter:description' => 'Deskripsi Twitter Default.',
-    'twitter:image' => 'https://example.com/images/default-twitter.jpg',
-    'twitter:site' => '@akun_twitter',
-    'twitter:creator' => '@akun_penulis',
+    'twitter:card' => null, // Contoh: 'summary', 'summary_large_image'
+    'twitter:title' => null, // Contoh: 'Judul untuk Twitter Card'
+    'twitter:description' => null, // Contoh: 'Deskripsi Twitter'
+    'twitter:image' => null, // Contoh: 'https://example.com/twitter.jpg'
+    'twitter:site' => null, // Contoh: '@akun_situs'
+    'twitter:creator' => null, // Contoh: '@akun_penulis'
   ],
+
+  /*
+    |--------------------------------------------------------------------------
+    | Meta Tag Keamanan
+    |--------------------------------------------------------------------------
+    */
   'security' => [
-    'Content-Security-Policy' => "default-src 'self'",
-    'X-Content-Type-Options' => 'nosniff',
-    'X-Frame-Options' => 'DENY',
-    'Referrer-Policy' => 'no-referrer-when-downgrade',
-    'Permissions-Policy' => 'geolocation=(), microphone=()',
-    'Strict-Transport-Security' => 'max-age=31536000; includeSubDomains',
+    'Content-Security-Policy' => null, // Contoh: "default-src 'self'"
+    'X-Content-Type-Options' => null, // Biasanya: 'nosniff'
+    'X-Frame-Options' => null, // Contoh: 'DENY' atau 'SAMEORIGIN'
+    'Referrer-Policy' => null, // Contoh: 'no-referrer-when-downgrade'
+    'Permissions-Policy' => null, // Contoh: 'geolocation=(), microphone=()'
+    'Strict-Transport-Security' => null, // Contoh: 'max-age=31536000; includeSubDomains'
   ],
+
+  /*
+    |--------------------------------------------------------------------------
+    | Lain-lain
+    |--------------------------------------------------------------------------
+    */
   'misc' => [
-    'theme-color' => '#ffffff',
-    'format-detection' => 'telephone=no',
+    'theme-color' => null, // Contoh: '#ffffff'
+    'format-detection' => null, // Contoh: 'telephone=no'
   ],
+
+  /*
+    |--------------------------------------------------------------------------
+    | JSON-LD (Structured Data)
+    |--------------------------------------------------------------------------
+    */
   'json_ld' => [
-    'enabled' => true,
-    'scripts' => [],
+    'enabled' => true, // Aktifkan atau matikan dukungan JSON-LD
+    'scripts' => [], // Bisa diisi default JSON-LD schema jika ada
   ],
 ];
