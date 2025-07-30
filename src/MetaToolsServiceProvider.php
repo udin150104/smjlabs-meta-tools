@@ -9,20 +9,20 @@ class MetaToolsServiceProvider extends ServiceProvider
 {
   public function register()
   {
-    $this->mergeConfigFrom(__DIR__ . '/../config/meta-tools.php', 'meta-tools');
+    $this->mergeConfigFrom(__DIR__ . '/../config/smjlabs-meta-tools.php', key: 'smjlabsmetatools');
 
     $this->app->singleton(MetaManager::class, function ($app) {
-      return new MetaManager(config('meta-tools'));
+      return new MetaManager(config(key: 'smjlabsmetatools'));
     });
   }
 
   public function boot()
   {
     $this->publishes([
-      __DIR__ . '/../config/meta-tools.php' => config_path('meta-tools.php'),
-    ], 'config');
+      __DIR__ . '/../config/smjlabs-meta-tools.php' => config_path('smjlabs-meta-tools.php'),
+    ], 'smjlabs-meta-tools');
 
-    $this->loadViewsFrom(__DIR__ . '/../resources/views', 'meta-tools');
+    $this->loadViewsFrom(__DIR__ . '/../resources/views', 'smjlabsmetatools');
     // Blade directive to set meta
     Blade::directive('meta', function ($expression) {
       return "<?php \\Smjlabs\\MetaTools\\Facades\\MetaTools::set($expression); ?>";

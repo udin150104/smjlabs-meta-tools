@@ -41,7 +41,7 @@ class MetaManager
 
   public function render(): string
   {
-    return view('meta-tools::tags', ['meta' => $this->meta])->render();
+    return view('smjlabsmetatools::tags', ['meta' => $this->meta])->render();
   }
 
   public function addJsonLd(array $schema): self
