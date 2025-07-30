@@ -1,0 +1,39 @@
+{
+    "name": "udin150104/meta-tools",
+    "description": "Reusable SEO and Security meta tag manager for laravel",
+    "keywords": [
+        "meta",
+        "meta-tools",
+        "laravel",
+        "SEO"
+    ],
+    "type": "library",
+    "license": "UNLICENSED",
+    "autoload": {
+        "psr-4": {
+            "Smjlabs\\MetaTools\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "syahrudin simanjuntak",
+            "email": "udin150104@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Smjlabs\\MetaTools\\MetaToolsServiceProvider"
+            ]
+        },
+        "aliases": {
+            "MetaTools": "Smjlabs\\MetaTools\\Facades\\MetaTools"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^12.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
