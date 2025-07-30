@@ -18,6 +18,7 @@ return [
     'robots' => null, // Contoh: 'index, follow' atau 'noindex, nofollow'
     'language' => null, // Contoh: 'id' atau 'en'
     'canonical' => null, // Contoh: 'https://example.com/halaman'
+    'csrf-token' => null, // Contoh : csrf_token()
   ],
 
   /*
@@ -58,6 +59,7 @@ return [
     'Content-Security-Policy' => null, // Contoh: "default-src 'self'"
     'X-Content-Type-Options' => null, // Biasanya: 'nosniff'
     'X-Frame-Options' => null, // Contoh: 'DENY' atau 'SAMEORIGIN'
+    'X-UA-Compatible' => null, // Contoh : 'ie=edge'
     'Referrer-Policy' => null, // Contoh: 'no-referrer-when-downgrade'
     'Permissions-Policy' => null, // Contoh: 'geolocation=(), microphone=()'
     'Strict-Transport-Security' => null, // Contoh: 'max-age=31536000; includeSubDomains'

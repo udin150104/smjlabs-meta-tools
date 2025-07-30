@@ -24,10 +24,10 @@
         "laravel": {
             "providers": [
                 "Smjlabs\\MetaTools\\MetaToolsServiceProvider"
-            ]
-        },
-        "aliases": {
-            "MetaTools": "Smjlabs\\MetaTools\\Facades\\MetaTools"
+            ],
+            "aliases": {
+                "MetaTools": "Smjlabs\\MetaTools\\Facades\\MetaTools"
+            }
         }
     },
     "require": {
