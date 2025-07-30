@@ -32,7 +32,9 @@ Tambahkan package ke `composer.json`:
 
 Install:
 ```bash
-composer require udin150104/meta-tools
+composer require udin150104/meta-tools 
+atau
+composer require udin150104/meta-tools:dev-main --prefer-source
 ```
 
 Publish config:
